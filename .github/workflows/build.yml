@@ -27,7 +27,7 @@ jobs:
         run: node scripts/build-icons.js
 
       - name: Build installer
-        run: npx electron-vite build && npx electron-builder --win
+        run: npx electron-vite build && npx electron-builder --win --publish never
 
       - name: Upload to release
         uses: softprops/action-gh-release@v2
