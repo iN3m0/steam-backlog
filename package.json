@@ -1,0 +1,60 @@
+{
+  "name": "steam-backlog",
+  "version": "1.0.0",
+  "description": "Track your Steam game backlog",
+  "main": "./out/main/index.js",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "start": "electron-vite preview",
+    "prepackage": "node scripts/build-icons.js",
+    "package": "electron-vite build && electron-builder --win"
+  },
+  "build": {
+    "appId": "com.steambacklog.app",
+    "productName": "Steam Backlog Tracker",
+    "copyright": "MIT",
+    "directories": { "output": "release", "buildResources": "build" },
+    "files": ["out/**/*"],
+    "win": {
+      "target": [{ "target": "nsis", "arch": ["x64"] }],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Steam Backlog Tracker"
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "GITHUB_USERNAME",
+      "repo": "steam-backlog"
+    }
+  },
+  "devDependencies": {
+    "@electron-toolkit/tsconfig": "^1.0.1",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "electron": "^31.0.0",
+    "electron-builder": "^26.15.3",
+    "electron-vite": "^2.3.0",
+    "png-to-ico": "^3.0.1",
+    "sharp": "^0.35.2",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.4"
+  },
+  "dependencies": {
+    "@electron-toolkit/preload": "^3.0.0",
+    "@electron-toolkit/utils": "^3.0.0",
+    "@tanstack/react-virtual": "^3.14.3",
+    "electron-store": "^8.2.0",
+    "electron-updater": "^6.8.9",
+    "howlongtobeat": "^1.8.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
