@@ -30,7 +30,7 @@
     },
     "publish": {
       "provider": "github",
-      "owner": "GITHUB_USERNAME",
+      "owner": "iN3m0",
       "repo": "steam-backlog"
     }
   },

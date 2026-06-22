@@ -33,7 +33,7 @@ export default function AboutModal({ onClose }: Props) {
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 24 }}>
-          <button className="btn" onClick={() => openExternal('https://github.com/GITHUB_USERNAME/steam-backlog/issues')}>
+          <button className="btn" onClick={() => openExternal('https://github.com/iN3m0/steam-backlog/issues')}>
             Report an Issue ↗
           </button>
           <button className="btn" onClick={() => openExternal('https://steamcommunity.com/dev/apikey')}>

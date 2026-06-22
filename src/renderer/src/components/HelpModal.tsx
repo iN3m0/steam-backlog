@@ -250,7 +250,7 @@ function FAQ({ openExternal }: { openExternal: (u: string) => void }) {
       </Q>
 
       <Q q="How do I report a bug or request a feature?">
-        <button className="help-link" onClick={() => openExternal('https://github.com/GITHUB_USERNAME/steam-backlog/issues')}>
+        <button className="help-link" onClick={() => openExternal('https://github.com/iN3m0/steam-backlog/issues')}>
           Open an issue on GitHub ↗
         </button>
       </Q>
